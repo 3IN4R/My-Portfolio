@@ -1,3 +1,2 @@
 # My-Portfolio
-My not so perfect portfolio.
-Only Source code.
+Welcome to my not so perfect portfolio.
