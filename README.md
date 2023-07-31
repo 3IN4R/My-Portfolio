@@ -1,2 +1,2 @@
 # My-Portfolio
-Welcome to my not so perfect portfolio.
+Welcome to my portfolio source code.
