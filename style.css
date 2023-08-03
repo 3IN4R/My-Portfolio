@@ -1,7 +1,4 @@
-/*@font-face {
-    font-family: 'BebasNeue-Regular';
-    src: url('resources/BebasNeue-Regular.ttf');
-} */
+
 @font-face {
     font-family: 'Oswald-Medium';
     src: url('resources//Oswald-Medium.ttf');
@@ -60,16 +57,24 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *{
   padding: 0;
   margin: 0;
+  
 }
 
 body {
     background-image: url("img/bg.jpg");
     background-attachment: fixed;
+    overflow-x: hidden;
     
 }
+
+
 
 
 
@@ -81,21 +86,30 @@ body {
   text-decoration: none;
   color:#ffffff;
   font-family: Oswald-Medium;
-  background-color: #00000096;
-  padding: 5rem 2rem;
-  margin:  2rem 4rem;
+  padding: 50px 50px;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(255, 255, 255);
+    justify-content: center;
+    max-width: 100%;
+    margin:  0rem 2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    height: auto;
   border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
+    border: 2px solid rgb(255, 255, 255);
 }
 
 .container-abouttext {
   text-decoration: none;
   color:#ffffff;
   font-family: Oswald-Medium;
-  background-color: #00000096;
-  padding: 5rem 2rem;
-  margin:  3rem 6rem;
-  border-radius: 0.5rem;
+  padding: 50px 50px;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(255, 255, 255);
+    max-width: 100%;
+    margin:  2rem 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
   justify-content: center;
 }
 
@@ -109,16 +123,17 @@ body {
   margin-bottom: 5rem;
 }
 .container-skillicons{
-    display: inline-flex;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 2rem;
-    position: absolute;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
 }
 
 .skill {
   transition: transform 0.5s ease-in;
+  
 }
 
 .skill:hover{  
@@ -225,10 +240,16 @@ footer{
  }
 
  .skillfooter {
-   position: absolute;
+   position: relative;
  }
 
  @media only screen and (max-width: 900px) {
+    .aboutfoot{
+      position: absolute;
+      margin-bottom: 0;
+
+    }
+
     footer{
        background: rgb(0, 0, 0);
     }
@@ -241,26 +262,32 @@ header {
     font-family: Oswald-Medium;
     width: 100%;
     height: 80px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.688);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 0px;
-    position: absolute;
+    position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 .logo {
-    font-family: Oswald-Medium;
     font-style: normal;
     text-decoration: none;
     font-size: 28px;
     color: white;
-    padding-left: 1.5rem;
+    margin-left: 1rem;
+    transition: transform 0.5s ease-in;
 }
 
 .logo:hover {
-  transform: scale(1.2);
+  color: rgb(84, 0, 210) ;
+  transform: rotate(360deg);
+} 
+
+.logoimg{
+  width: 2.5rem;
 }
 
 .hamburger {
@@ -278,25 +305,33 @@ header {
     font-size: 20px;
     padding: 10px 25px;
     border-radius: 50px;
-    transition: 0.2s;
+    transition: 0.5s;
     margin: 0 5px;
     text-decoration: none;
     
 }
 
+.sprog{
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 25px;
+}
+
 .nav-bar ul li a:hover {
-    color: black;
-    background: white;
+    color: rgb(255, 255, 255);
+    background-color: rgb(84, 0, 210);
 }
 
 .nav-bar ul li a.active {
-    color: black;
-    background: white;
+  border:2px solid rgb(251, 249, 255) ;
+
 }
 
 @media only screen and (max-width: 1320px) {
     header{
         padding: 0 0px;
+        z-index: 1;
     }
 }
 
@@ -324,13 +359,15 @@ header {
         left: 0;
         right: 0;
         width: 100vw;
-        background: black;
-        transition: 0.2s;
+        background: rgba(0, 0, 0, 0.777);
+        transition: 0.5s;
         overflow: hidden;
+        z-index: 1;
     }
     .nav-bar.active {
         height: 520px;
         width: 100%;
+        z-index: 1;
     }
     .nav-bar ul {
         display: block;
@@ -339,16 +376,19 @@ header {
         text-align: center;
         transition: 0.1s;
         opacity: 0;
+        z-index: 1;
     }
     .nav-bar.active ul {
         opacity: 1;
+        z-index: 1;
     }
     .nav-bar ul li a {
         margin-bottom: 12px;
         color: rgb(255, 255, 255);
     }
     header {
-        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.834);
+        z-index: 1;
     }
 }
 /* Navbar-ends */
@@ -359,14 +399,15 @@ header {
 .index-container{
     display: flex; 
     flex-wrap: nowrap;
-    background-color: #000000a8;
+    
     padding: 50px 50px;
     border-radius: 0.5rem;
+    border: 2px solid rgb(255, 255, 255);
     justify-content: center;
     max-width: 100%;
     margin:  2rem 2rem;
-    margin-bottom: 2rem;
-    margin-top: 8rem;
+    margin-bottom: 0.5rem;
+    margin-top: 5rem;
     height: auto;
 }
 
@@ -374,6 +415,7 @@ header {
   .index-container{
     flex-wrap: wrap;
     margin: 0, 0;
+    margin-top: 3rem;
     padding: 0, 0;
   }
 
@@ -382,19 +424,19 @@ header {
 
 .text{
   text-align: center;
-  background-color: inherit;
+  
 }
 
 .introheading {
     font-family: Oswald-Medium;
-    font-size: 50px;
+    font-size: 5vw;
     color: rgb(255, 255, 255);
     text-align: center;
 }
 
 .aboutheading {
   font-family: Oswald-Medium;
-  font-size: 50px;
+  font-size: 4vw;
   color: rgb(255, 255, 255);
   text-align: center;
   margin-bottom: 5rem;
@@ -402,7 +444,7 @@ header {
 
 .skillheading {
   font-family: Oswald-Medium;
-  font-size: 50px;
+  font-size: 4vw;
   color: rgb(255, 255, 255);
   text-align: center;
   margin-bottom: 5rem;
@@ -410,9 +452,10 @@ header {
 
 .introheading2 {
   font-family: Oswald-Medium;
-    font-size: 25px;
+    font-size: 3vw;
     color: rgb(255, 255, 255);
     text-align: center;
+    margin-top: 1rem;
 }
 
 .introtext {
@@ -422,11 +465,68 @@ header {
 .textoid {
   background-color: inherit;
   font-family: Oswald-Medium;
-  font-size: 20px;
+  font-size: 1.5rem;
   color: #ffffff;
   text-align: justify;
   padding: 2rem 2rem;
-  margin: 0.5rem 2rem;
+  margin-top: 3.0rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+  div.index-container{
+    margin-top: 5rem;
+  }
+
+  div.btnbox{
+    margin-top: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  a.btn{
+    padding: 0.1rem;
+    font-size: 14px;
+    margin: 0.3rem;
+  }
+
+  p{
+     font-size: 1rem;
+
+  }
+  .textoid{
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .aboutheading{
+    margin-bottom: 0rem;
+  }
+
+
+
+  div.container-skillstext{
+    margin-bottom: 0.5rem;
+    padding: 5.0rem 2rem;
+    margin-top: 1rem;
+
+  }
+  p.skillstext{
+    font-size: 0.8rem;
+  }
+  h1.skillheading{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+
+  }
+
+  .skill{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 0rem;
+  }
+
+
+
 }
 
 .btnbox {
@@ -436,13 +536,11 @@ header {
   padding: 0.2rem 0.2rem;
   margin-top: 3rem;
   text-align: center;
-  background-color: inherit;
   
 }
 
 .btn {
   font-family: Oswald-Medium;
-  background-color: inherit; /* Green */
   border:2px solid rgb(251, 249, 255) ;
   border-radius: 6rem;
   color: white;
@@ -450,6 +548,7 @@ header {
   text-align: center;
   text-decoration: none;
   font-size: 25px;
+  transition: 0.5s;
 }
 
 .btn:hover {
@@ -461,13 +560,7 @@ header {
   background-color: none;
 }
 .me{
-    animation-name: FadeIn;
-    animation-duration: 3s;
-    transition-timing-function: linear;
-    border-radius: 50cm;
     max-width: 100%;
-    height: auto;
-    border:2px solid rgb(251, 249, 255) ;
   }
 
 
@@ -481,6 +574,33 @@ header {
     border:2px solid rgb(251, 249, 255) ;
   }
 
+  .btnbox2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0.2rem 0.2rem;
+    text-align: center;
+    
+  }
+  
+  .btn2 {
+    font-family: Oswald-Medium;
+   
+    border-radius: 6rem;
+    color: white;
+    padding: 0.1rem 0rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn2:hover {
+    transition: 0.7s;
+    background-color: rgb(84, 0, 210);
+  }
     
   /* Intro-card-ends */
 
@@ -500,19 +620,41 @@ header {
 
   /* Projects-list */
 
+  .big-project-container{
+
+  }
+
+  .project-heading{
+    color: #ffffff;
+    font-family: Oswald-Medium;
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 5rem;
+  }
+
   .project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 5rem 1.3rem;
+    margin-bottom: 2rem;
+
     
   }
 
   .contact-container {
-    display: flex;
-    flex-wrap: wrap;
+    
     justify-content: center;
-    margin: 7rem 1.3rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #0000006f;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(255, 255, 255);
+    justify-content: center;
+    max-width: 100%;
+    margin:  2rem 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     
   }
 
@@ -530,16 +672,13 @@ header {
   }
 
   .cardcont {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 100%;
     margin: 1rem 1rem;
     text-align: center;
     color: #ffffff;
-    background-color: #0000006f;
     transition: transform .5s; 
-    border-radius: 0.5rem;
-    border: 2px solid rgb(255, 255, 255);
-    padding: 10rem 10rem;
+    padding: 2rem 2rem;
+    padding-top: 0.5rem;
   }
 
   .cardcont h1{
@@ -593,6 +732,11 @@ header {
   .cardcont button:hover {
     opacity: 0.7;
   }
+  .vizitines{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .btnproj {
     font-family: Oswald-Medium;
@@ -604,28 +748,146 @@ header {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  transition: 0.5s;
   }
 
   .btncont {
     font-family: Oswald-Medium;
     background-color: inherit; /* Green */
-    border:2px solid rgb(251, 249, 255) ;
     border-radius: 6rem;
     color: white;
     padding: 0.1rem 1rem;
     text-align: center;
     text-decoration: none;
     font-size: 25px;
+    transition: 0.5s;
   }
 
   .btncont:hover {
     background-color: rgb(84, 0, 210);
-    transition: color .4s ease;
   }
 
   .btnproj:hover {
     background-color: rgb(84, 0, 210);
-    transition: color .4s ease
   }
+
+  .contact-heading{
+    font-family: Oswald-Medium;
+      font-size: 3vw;
+      color: rgb(255, 255, 255);
+      text-align: center;
+  }
+  
+
+  .arrow{
+    height: auto;
+    width: 5rem;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+
+  .hiding1{
+    -webkit-transition-delay: 5s;
+    -o-transition-delay: .8s;
+    transition-delay: .8s;
+    -webkit-transition: 5s;
+    -o-transition: .8s;
+    transition: 1.5s;
+    opacity: 0;
+  }
+
+  .hiding1.inView {
+    opacity: 1;
+    -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+    transform: translateY(0px) rotate(0deg) translateZ(0);
+}
+.inView {
+    opacity: 1;
+    -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+    transform: translateY(0px) rotate(0deg) translateZ(0);
+}
+
+.trick{
+  opacity: 0;
+}
+.trick2{
+  opacity: 0;
+}
+.trick3{
+  opacity: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .btn2{
+    font-size: 1rem;
+    padding: 0.1rem;
+    margin: 0;
+  }
+
+  .btnbox2{
+    justify-content:space-evenly;
+    display: block;
+    margin-top: 1rem;
+  }
+  .me{
+    width: 11rem;
+  }
+  .introheading{
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+  }
+  .introheading2{
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  .introtext{
+    font-size: 1.1rem;
+  }
+  p.abouttext{
+    font-size: 0.5rem;
+    margin-bottom: 0;
+
+ }
+ .container-abouttext{
+  margin-top: 1.5rem;
+ }
+ .arrow{
+  width: 2.5rem;
+  margin-right: 45%;
+  margin-left: 45%;
+ }
+ .aboutheading{
+  font-size: 2rem;
+ }
+ .project-heading{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+ }
+ .project-container{
+  margin-top: 0;
+ }
+ .contact-container{
+  flex-wrap: nowrap;
+  margin-top: 0%;
+  margin-bottom: 1rem;
+ }
+
+ .btncont{
+  font-size: 1rem;
+ }
+ h1{
+  font-size: 1.2rem;
+ }
+ .contact-heading{
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 0.5rem;
+ }
+ .cardcont{
+  padding: 0.5rem;
+ }
+}
 
   
