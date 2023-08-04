@@ -3,50 +3,6 @@
     font-family: 'Oswald-Medium';
     src: url('resources//Oswald-Medium.ttf');
 }
-@keyframes FadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes FadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes FadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes FadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes FadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 @keyframes spin {
   from {
@@ -604,25 +560,8 @@ header {
     
   /* Intro-card-ends */
 
-
-  /* Blinker */
-  span{
-    animation: blinker 1s linear infinite;
-  }
-  
-  @keyframes blinker{
-    50%{
-      opacity: 0;
-    }
-  }
-
-  /*Blinkr-end*/
-
   /* Projects-list */
 
-  .big-project-container{
-
-  }
 
   .project-heading{
     color: #ffffff;
@@ -890,4 +829,8 @@ header {
  }
 }
 
-  
+.refbuttons{
+  display: flex;
+  justify-content: space-around;
+  margin: 0rem 2rem;
+}
