@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    background-image: url("img/bg.jpg");
+    background-image: url("img/bg.jpg"); /* Image credit: https://pixabay.com/photos/stars-sky-night-starry-sky-1845140/ */
     background-attachment: fixed;
     overflow-x: hidden;
     
@@ -36,7 +36,7 @@ body {
 
 
   
-/* Skillpage */  
+/* Skills section*/  
 
 .container-skillstext {
   text-decoration: none;
@@ -274,9 +274,19 @@ header {
   padding: 10px 25px;
 }
 
+.intro-text{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.abouttext{
+  padding-left: 6.0rem;
+  padding-right: 8rem;
+}
+
 .nav-bar ul li a:hover {
     color: rgb(255, 255, 255);
     background-color: rgb(84, 0, 210);
+    
 }
 
 .nav-bar ul li a.active {
@@ -348,8 +358,6 @@ header {
     }
 }
 /* Navbar-ends */
-
-/* Main-content */
 
 /* Intro-card */
 .index-container{
@@ -710,6 +718,11 @@ header {
     background-color: rgb(84, 0, 210);
   }
 
+  .refbuttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 0rem 2rem;
+  }
   .contact-heading{
     font-family: Oswald-Medium;
       font-size: 3vw;
@@ -717,7 +730,7 @@ header {
       text-align: center;
   }
   
-
+/* Miscelaneous */
   .arrow{
     height: auto;
     width: 5rem;
@@ -756,6 +769,9 @@ header {
   opacity: 0;
 }
 
+/* Miscelaneous ends*/
+
+/* Smaller viewports */
 @media only screen and (max-width: 900px) {
   .btn2{
     font-size: 1rem;
@@ -829,8 +845,4 @@ header {
  }
 }
 
-.refbuttons{
-  display: flex;
-  justify-content: space-around;
-  margin: 0rem 2rem;
-}
+/* Smaller viewports ends*/
