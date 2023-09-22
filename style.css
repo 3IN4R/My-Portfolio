@@ -80,8 +80,8 @@ body {
 }
 .container-skillicons{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     padding-top: 2rem;
     padding-bottom: 2rem;
 
@@ -92,25 +92,20 @@ body {
   
 }
 
-.skill:hover{  
-      transform: rotate(360deg);
-  
-}
-
 .skill{
   height: 100px;
   width: 100px;
-  margin-right: 1rem;
 }
 
-.react{
-  height: 100px;
-  width: 100px;
-  animation-name: spin;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  margin-right: 1rem;
+.skillbox{
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.skilltextbox{
+  justify-content: space-around;
+  font-size: 1.5rem;
 }
 
 
@@ -461,6 +456,11 @@ header {
     margin-top: 0;
     padding: 0;
   }
+  .intro-text{
+    padding: 0;
+    font-size: 0.7rem;
+  }
+
 
   .aboutheading{
     margin-bottom: 0rem;
@@ -483,12 +483,6 @@ header {
 
   }
 
-  .skill{
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-bottom: 0rem;
-  }
-
 
 
 }
@@ -508,7 +502,7 @@ header {
   border:2px solid rgb(251, 249, 255) ;
   border-radius: 6rem;
   color: white;
-  padding: 0.1rem 1rem;
+  padding: 0.1rem 2rem;
   text-align: center;
   text-decoration: none;
   font-size: 25px;
@@ -519,12 +513,19 @@ header {
   background-color: rgb(84, 0, 210);
 }
 
+.firstcol{
+  justify-content: center;
+  padding: 0rem 5rem;
+}
 
 .img-container {
   background-color: none;
+  
 }
 .me{
+    height: 12rem;
     max-width: 100%;
+    border-radius: 50%;
   }
 
 
@@ -540,9 +541,8 @@ header {
 
   .btnbox2 {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 0.2rem 0.2rem;
     text-align: center;
     
@@ -553,7 +553,7 @@ header {
    
     border-radius: 6rem;
     color: white;
-    padding: 0.1rem 0rem;
+    padding: 0.1rem 1rem;
     text-align: center;
     text-decoration: none;
     font-size: 25px;
@@ -774,7 +774,7 @@ header {
 /* Smaller viewports */
 @media only screen and (max-width: 900px) {
   .btn2{
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.1rem;
     margin: 0;
   }
@@ -785,7 +785,7 @@ header {
     margin-top: 1rem;
   }
   .me{
-    width: 11rem;
+    height: 12rem;
   }
   .introheading{
     font-size: 2rem;
@@ -801,7 +801,7 @@ header {
     font-size: 1.1rem;
   }
   p.abouttext{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     margin-bottom: 0;
 
  }
@@ -843,6 +843,41 @@ header {
  .cardcont{
   padding: 0.5rem;
  }
+
+.intro-text{
+  padding: 0%;
+}
+.abouttext{
+ padding: 0%;
 }
 
+.skill{
+  width: 55%;
+  height: 55%;
+}
+.skilltextbox{
+  font-size: 0.5rem;
+}
+}
+
+@media only screen and (max-width: 600px){
+  div.intro-text{
+    padding: 0;
+    margin: 0;
+  }
+  div.abouttext{
+    padding: 0;
+    margin: 0;
+  }
+  .skill{
+    height: 66%;
+    width: 55%;
+  }
+  .btn{
+    padding: 0.5rem 0.5rem;
+  }
+  .me{
+  }
+}
 /* Smaller viewports ends*/
+
