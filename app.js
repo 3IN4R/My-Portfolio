@@ -13,7 +13,7 @@ hamburger.onclick = function() {
 
 function animatedMessageText() {
 const message = ["My name is Einaras"] 
-const speed = 100
+const speed = 120
 let textPosition = 0;
 
   function typewriter() {
@@ -48,7 +48,6 @@ function step() {
 window.requestAnimationFrame(step);
 }
 
-
 let elementsArray = document.querySelectorAll(".hiding1");
 console.log(elementsArray);
 window.addEventListener('scroll', fadeIn ); 
@@ -64,12 +63,23 @@ function fadeIn() {
     }
 }
 
-function langChange(){
+$(".animated-progress span").each(function progressBar () {
+    $(this).animate(
+      {
+        width: $(this).attr("data-progress") + "%",
+      },
+      1000
+    );
+    $(this).text($(this).attr("data-progress") + "%");
+  });
+
+
+/**function langChange(){
     let langButton = document.getElementById('dklang');
-    if (langButton.innerHTML === 'EN') {
-      langButton.innerHTML = 'DK';
-    } else {
+    if (langButton.innerHTML === 'DK') {
       langButton.innerHTML = 'EN';
+    } else {
+      langButton.innerHTML = 'DK';
     }
     let naviBut1 = document.getElementById('about1');
     if (naviBut1.innerHTML === 'About') {
@@ -78,16 +88,16 @@ function langChange(){
         naviBut1.innerHTML = 'About';
     }
     let naviBut2 = document.getElementById('contact');
-    if (naviBut2.innerHTML === 'Kontakt') {
-        naviBut2.innerHTML = 'Contact';
-    } else {
+    if (naviBut2.innerHTML === 'Contact') {
         naviBut2.innerHTML = 'Kontakt';
+    } else {
+        naviBut2.innerHTML = 'Contact';
     }
     let naviBut3 = document.getElementById('skills1');
-    if (naviBut3.innerHTML === 'Færdigheder') {
-        naviBut3.innerHTML = 'Skills';
-    } else {
+    if (naviBut3.innerHTML === 'Skills') {
         naviBut3.innerHTML = 'Færdigheder';
+    } else {
+        naviBut3.innerHTML = 'Skills';
     }
 
     let naviBut4 = document.getElementById('about2');
@@ -97,12 +107,6 @@ function langChange(){
         naviBut4.innerHTML = 'About me';
     }
 
-    let naviBut5 = document.getElementById('portf');
-    if (naviBut5.innerHTML === 'My Portfolio') {
-        naviBut5.innerHTML = 'Min Portfolio';
-    } else {
-        naviBut5.innerHTML = 'My Portfolio';
-    }
 
     let naviBut6 = document.getElementById('skills2');
     if (naviBut6.innerHTML === 'My skills') {
@@ -136,10 +140,10 @@ function langChange(){
         headingFourth.innerHTML = 'Contact me';
     }
     let cvChange = document.getElementById('CV');
-    if (cvChange.innerHTML === 'Take a lookt ay my CV') {
+    if (cvChange.innerHTML === 'Take a look at my CV') {
         cvChange.innerHTML = 'Mit CV';
     } else {
-        cvChange.innerHTML = 'Take a lookt ay my CV';
+        cvChange.innerHTML = 'Take a look at my CV';
     }
     let changeMesg = document.getElementById('besked');
     if (changeMesg.innerHTML === 'Send me a message') {
@@ -166,16 +170,22 @@ function langChange(){
         changeMesg4.innerHTML = 'Call Me';
     }
 }
+**/
 
 
 
-  
 
-  langChange();
+
+
+  console.log(animatedMessageText);
+  console.log(navbarMenuStyleChange);
+
+progressBar();
+  animatedBar();
   fadeIn();
   navbarMenuStyleChange();
   animatedMessageText();
   movingSkills();
-
+  langChange();
 
 
