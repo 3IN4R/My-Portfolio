@@ -168,6 +168,80 @@ function navbarMenuStyleChange() {
 
 
 
+const skillsSection = document.getElementById('skills-section');
+
+const progressBars = document.querySelectorAll('.progress-bar');
+
+window.addEventListener('scroll',() =>{
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight;
+
+    if(sectionPos < screenPos){
+        showProgress()
+      //  console.log('show-progress');
+    }else{
+        hideProgress()
+       /// console.log('hideProgress');
+    
+    }
+});
+
+function hideProgress(){
+    progressBars.forEach(progressBar => {
+        progressBar.style.opacity = 0;
+        progressBar.style.width = 0;
+    }); 
+}
+function showProgress(){
+    progressBars.forEach(progressBar => {
+        const value = progressBar.dataset.progress;
+      //  console.log(value)
+        progressBar.style.opacity = 1;
+        progressBar.style.width = `${value}%`;
+    });
+}
+
+const revealScrolls = document.querySelectorAll('section');
+
+revealScrolls.forEach((section) => {
+    window.addEventListener('load', eventListener);
+    window.addEventListener('scroll', eventListener);
+
+    function eventListener(){
+        let windowHeight = window.innerHeight;
+        let sectionRectTop = section.getBoundingClientRect().top;
+       // console.log('Window Height:' + windowHeight);
+       // console.log('Section Recttop:' + sectionRectTop);
+
+       if(sectionRectTop < windowHeight) {
+        section.classList.add('active');
+       }
+    }
+
+    window.addEventListener('scroll', () => {
+        let reveals = section.querySelectorAll('.reveal');
+        reveals.forEach((reveal, index) => {
+            if(section.classList.contains('active')){
+                const delay = 600;
+
+                setTimeout(() => {
+                    reveal.classList.add('active');
+
+                }, index * delay);
+            }
+        } );
+    } );
+})
+
+
+
+
+console.log(hideProgress);
+console.log(showProgress);
+ 
+
+
+
 
   console.log(animatedMessageText);
   console.log(navbarMenuStyleChange, 'Hello');
@@ -175,5 +249,6 @@ function navbarMenuStyleChange() {
   fadeIn();
   navbarMenuStyleChange();
   animatedMessageText();
+
 
 
