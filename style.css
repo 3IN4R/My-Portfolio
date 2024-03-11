@@ -470,9 +470,6 @@ header {
     -webkit-text-stroke: 9px transparent;
 }
 
-.introtext {
-}
-
 .textoid {
   background-color: inherit;
   font-family: Oswald-Medium;
@@ -591,47 +588,11 @@ header {
   background-color: none;
   
 }
-.me{
+.profilepic{
     height: auto;
     max-width: 100%;
     border-radius: 50%;
     border: 2.5px solid white;
-  }
-
-
-  .aboutme{
-    animation-name: FadeIn;
-    animation-duration: 3s;
-    transition-timing-function: linear;
-    border-radius: 50cm;
-    height: auto;
-    width: 100%;
-    border:2px solid rgb(251, 249, 255) ;
-  }
-
-  .btnbox2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .btn2 {
-    font-family: Oswald-Medium;
-    border-radius: 6rem;
-    color: rgb(255, 255, 255);
-    padding: 0.1rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    font-size: 25px;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    background: linear-gradient(90deg, #b53fb1, transparent) rgb(84, 0, 210);
-    border:2px solid rgb(251, 249, 255) ;
-  }
-
-  .btn2:hover {
-    transition: 0.7s;
-    background-color: #f3d721;
   }
     
   /* Intro-card-ends */
@@ -678,19 +639,6 @@ header {
     
   }
 
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 350px;
-    margin: 1rem 1rem;
-    text-align: center;
-    color: #ffffff;
-    transition: transform .5s; 
-    /*border-radius: 0.5rem;*/
-   
-    background-color: #2f2f2f;
-    border: 1.5px solid white;
-  }
-
   .card2 {
     max-width: 350px;
     margin: 1rem 1rem;
@@ -712,11 +660,6 @@ header {
     padding-top: 0.5rem;
   }
 
-  .card-content{
-    background-color: #2f2f2f;
-    padding: 1rem .8rem;
-  }
-
   .card-content2{
     background-color: #000000;
     padding: .5rem .8rem;
@@ -726,41 +669,13 @@ header {
     margin-bottom: 2.5rem;
   }
 
-  .card p {
-    margin-top: 0.2rem;
-    margin-bottom: 0.8rem;
-    font-family: 'Inter', sans-serif;
-    text-align: justify;
-
-  }
-
   .cardcont p {
     margin-top: 0.2rem;
     margin-bottom: 1.8rem;
   }
 
-  .card:hover {
-    transform: scale(1.1);
-  }
-
   .reveal.active:hover {
     transform: scale(1.1);
-  }
-
-  .card h1{
-    font-family: Oswald-Medium;
-  }
-  
-  .card button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
   }
 
   .cardcont button {
@@ -774,10 +689,6 @@ header {
     width: 100%;
     font-size: 18px;
     margin-top: 5rem;
-  }
-  
-  .card button:hover {
-    opacity: 0.7;
   }
 
   .cardcont button:hover {
@@ -823,11 +734,6 @@ header {
 
   .btnproj:hover {
     background-color: #f3d721;
-  }
-
-  .refbuttons{
-    display: flex;
-    justify-content: space-around;
   }
 
   .refbuttons2{
@@ -1096,94 +1002,12 @@ p.intro-text{
 /* Smaller viewports ends*/
 
 
-#progressbar {
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 13px;
-  /* (height of inner div) / 2 + padding */
-  padding: 3px;
-  width: 100%;
-  margin-top: .5rem;
-}
-
-#progressbar>div {
-  background: linear-gradient(90deg,#b53fb1, transparent) rgb(84, 0, 210);
-  width: 100%;
-  /* Adjust with JavaScript */
-  height: 20px;
-  border-radius: 10px;
-}
-
-#progressbar2 {
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 13px;
-  /* (height of inner div) / 2 + padding */
-  padding: 3px;
-  width: 100%;
-  margin-top: .5rem;
-}
-
-#progressbar3 {
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 13px;
-  /* (height of inner div) / 2 + padding */
-  padding: 3px;
-  width: 100%;
-  margin-top: .5rem;
-}
-
-#progressbar2>div {
-  background: linear-gradient(90deg,#b53fb1, transparent) rgb(84, 0, 210);
-  width: 85%;
-  /* Adjust with JavaScript */
-  height: 20px;
-  border-radius: 10px;
-}
-
-#progressbar3>div {
-  background: linear-gradient(90deg,#b53fb1, transparent) rgb(84, 0, 210);
-  width: 70%;
-  /* Adjust with JavaScript */
-  height: 20px;
-  border-radius: 10px;
-}
-
-#progressbar4 {
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 13px;
-  /* (height of inner div) / 2 + padding */
-  padding: 3px;
-  width: 100%;
-  margin-top: .5rem;
-}
-
-#progressbar4>div {
-  background: linear-gradient(90deg,#b53fb1, transparent) rgb(84, 0, 210);
-  width: 33%;
-  /* Adjust with JavaScript */
-  height: 20px;
-  border-radius: 10px;
-}
-
-
 @media only screen and (max-width: 766px) {
 
   .project-container{
     justify-content: center;
   }
 
-  .container-skillstext #progressbar2 div{
-    font-size: .8rem;
-  }
-  .container-skillstext #progressbar div{
-    font-size: .8rem;
-  }
-  .container-skillstext #progressbar3 div{
-    font-size: .8rem;
-  }
   .btnbox2{
     display: flex;
      flex-wrap: nowrap;
@@ -1192,41 +1016,6 @@ p.intro-text{
     padding: .1rem .1rem;
     font-size: .8rem;
   }
-}
-
-
-.animated-progress {
-  width: 300px;
-  height: 30px;
-  border-radius: 5px;
-  margin: 20px 10px;
-  border: 1px solid rgb(189, 113, 113);
-  overflow: hidden;
-  position: relative;
-}
-
-.animated-progress span {
-  height: 100%;
-  display: block;
-  width: 0;
-  color: rgb(255, 251, 251);
-  line-height: 30px;
-  position: absolute;
-  text-align: end;
-  padding-right: 5px;
-}
-
-.progress-blue span {
-  background-color: blue;
-}
-.progress-green span {
-  background-color: green;
-}
-.progress-purple span {
-  background-color: indigo;
-}
-.progress-red span {
-  background-color: red;
 }
 
 
