@@ -1,19 +1,12 @@
 //To make navbar more responsive //  
 
-function navbarMenuStyleChange() {
-hamburger = document.querySelector('.hamburger');
-hamburger.onclick = function() {
-    navBar = document.querySelector('.nav-bar');
-    navBar.classList.toggle('active');
-    
-}
-}
+
 
 //Added animation to make more eye-catching for visitors
 
 function animatedMessageText() {
 const message = ["My name is Einaras"] 
-const speed = 100
+const speed = 120
 let textPosition = 0;
 
   function typewriter() {
@@ -23,13 +16,13 @@ let textPosition = 0;
   }
   
   window.addEventListener("load", typewriter)
-}
+} 
 
 
 
 //Added animation to make my skill icons more eye catching//
 
-function movingSkills(){
+/* function movingSkills(){
 const refreshRate = 1000 / 60;
 const maxXPosition = 700;
 let rect = document.getElementById('moving');
@@ -43,11 +36,10 @@ function step() {
     }
     rect.style.left = positionX + 'px';
     window.requestAnimationFrame(step);
-}
+} 
 
 window.requestAnimationFrame(step);
-}
-
+}*/
 
 let elementsArray = document.querySelectorAll(".hiding1");
 console.log(elementsArray);
@@ -64,12 +56,15 @@ function fadeIn() {
     }
 }
 
-function langChange(){
+
+
+
+/**function langChange(){
     let langButton = document.getElementById('dklang');
-    if (langButton.innerHTML === 'EN') {
-      langButton.innerHTML = 'DK';
-    } else {
+    if (langButton.innerHTML === 'DK') {
       langButton.innerHTML = 'EN';
+    } else {
+      langButton.innerHTML = 'DK';
     }
     let naviBut1 = document.getElementById('about1');
     if (naviBut1.innerHTML === 'About') {
@@ -78,16 +73,16 @@ function langChange(){
         naviBut1.innerHTML = 'About';
     }
     let naviBut2 = document.getElementById('contact');
-    if (naviBut2.innerHTML === 'Kontakt') {
-        naviBut2.innerHTML = 'Contact';
-    } else {
+    if (naviBut2.innerHTML === 'Contact') {
         naviBut2.innerHTML = 'Kontakt';
+    } else {
+        naviBut2.innerHTML = 'Contact';
     }
     let naviBut3 = document.getElementById('skills1');
-    if (naviBut3.innerHTML === 'Færdigheder') {
-        naviBut3.innerHTML = 'Skills';
-    } else {
+    if (naviBut3.innerHTML === 'Skills') {
         naviBut3.innerHTML = 'Færdigheder';
+    } else {
+        naviBut3.innerHTML = 'Skills';
     }
 
     let naviBut4 = document.getElementById('about2');
@@ -97,12 +92,6 @@ function langChange(){
         naviBut4.innerHTML = 'About me';
     }
 
-    let naviBut5 = document.getElementById('portf');
-    if (naviBut5.innerHTML === 'My Portfolio') {
-        naviBut5.innerHTML = 'Min Portfolio';
-    } else {
-        naviBut5.innerHTML = 'My Portfolio';
-    }
 
     let naviBut6 = document.getElementById('skills2');
     if (naviBut6.innerHTML === 'My skills') {
@@ -136,10 +125,10 @@ function langChange(){
         headingFourth.innerHTML = 'Contact me';
     }
     let cvChange = document.getElementById('CV');
-    if (cvChange.innerHTML === 'Take a lookt ay my CV') {
+    if (cvChange.innerHTML === 'Take a look at my CV') {
         cvChange.innerHTML = 'Mit CV';
     } else {
-        cvChange.innerHTML = 'Take a lookt ay my CV';
+        cvChange.innerHTML = 'Take a look at my CV';
     }
     let changeMesg = document.getElementById('besked');
     if (changeMesg.innerHTML === 'Send me a message') {
@@ -166,16 +155,100 @@ function langChange(){
         changeMesg4.innerHTML = 'Call Me';
     }
 }
+**/
+
+function navbarMenuStyleChange() {
+    hamburger = document.querySelector('.hamburger');
+    hamburger.onclick = function() {
+        navBar = document.querySelector('.nav-bar');
+        navBar.classList.toggle('active');
+        
+    }
+    }
 
 
 
-  
+const skillsSection = document.getElementById('skills-section');
 
-  langChange();
+const progressBars = document.querySelectorAll('.progress-bar');
+
+window.addEventListener('scroll',() =>{
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight;
+
+    if(sectionPos < screenPos){
+        showProgress()
+      //  console.log('show-progress');
+    }else{
+        hideProgress()
+       /// console.log('hideProgress');
+    
+    }
+});
+
+function hideProgress(){
+    progressBars.forEach(progressBar => {
+        progressBar.style.opacity = 0;
+        progressBar.style.width = 0;
+    }); 
+}
+function showProgress(){
+    progressBars.forEach(progressBar => {
+        const value = progressBar.dataset.progress;
+      //  console.log(value)
+        progressBar.style.opacity = 1;
+        progressBar.style.width = `${value}%`;
+    });
+}
+
+const revealScrolls = document.querySelectorAll('section');
+
+revealScrolls.forEach((section) => {
+    window.addEventListener('load', eventListener);
+    window.addEventListener('scroll', eventListener);
+
+    function eventListener(){
+        let windowHeight = window.innerHeight;
+        let sectionRectTop = section.getBoundingClientRect().top;
+       // console.log('Window Height:' + windowHeight);
+       // console.log('Section Recttop:' + sectionRectTop);
+
+       if(sectionRectTop < windowHeight) {
+        section.classList.add('active');
+       }
+    }
+
+    window.addEventListener('scroll', () => {
+        let reveals = section.querySelectorAll('.reveal');
+        reveals.forEach((reveal, index) => {
+            if(section.classList.contains('active')){
+                const delay = 600;
+
+                setTimeout(() => {
+                    reveal.classList.add('active');
+
+                }, index * delay);
+            }
+        } );
+    } );
+})
+
+
+
+
+console.log(hideProgress);
+console.log(showProgress);
+ 
+
+
+
+
+  console.log(animatedMessageText);
+  console.log(navbarMenuStyleChange, 'Hello');
+
   fadeIn();
   navbarMenuStyleChange();
   animatedMessageText();
-  movingSkills();
 
 
 
